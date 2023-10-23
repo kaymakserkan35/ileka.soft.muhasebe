@@ -1,0 +1,129 @@
+﻿@using ui.Models.Routes;
+
+@model ICollection<FirmListingModel>
+<script>
+    const modelData = @Html.Raw(Json.Serialize(Model)); // Model'i JSON formatına dönüştürün ve JavaScript değişkenine aktarın
+</script>
+
+
+
+<a asp-controller=@Routes.DevCont asp-action=@Routes.addFirm class="btn btn-dark d-block">    <i class="fa fa-plus-circle"></i> Add Firm</a>
+<!-- Tablo Görünümü -->
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">IsSole</th>
+            <th scope="col">Owners</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+
+            @{
+                if (!Model.Any(x => x.Modules == null))
+                {
+                    <th scope="col">Modules</th>
+                }
+            }
+
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Name</td>
+                <td>@(item.SoleTrader ? "Evet" : "Hayır")</td>
+                <td>
+                    <ul>
+                        @foreach (var x in item.Users)
+                        {
+                            <a asp-controller=@Routes.DevCont asp-action=@Routes.updateUser asp-route-id=@x.Id>
+                            <li>@x.Name</li>
+                            </a>
+
+                        }
+                    </ul>
+                </td>
+
+
+                <td>@item.PhoneNumber</td>
+                <td>@item.EMail</td>
+                @if (item.Modules != null)
+                {
+                    <td>
+                        <ul>
+                            @foreach (var x in item.Modules)
+                            {
+                                <li>@x.Name</li>
+                            }
+                        </ul>
+                    </td>
+                }
+                <td>
+
+
+                    <div class="dropdown dropdown-action">
+                        <a class="btn-action-icon" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                        <div class="dropdown-menu   customer-dropdown">
+                            <ul>
+                                <li class="dropdown-item"></li>
+                                <li class="dropdown-item">
+                                    <a asp-controller=@Routes.DevCont asp-action=@Routes.detailFirm asp-route-id=@item.Id>  <i class="fas fa-info-circle"></i> Detail</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a asp-controller=@Routes.DevCont asp-action=@Routes.updateFirm asp-route-id=@item.Id><i class="fas fa-edit"></i> Update</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a asp-controller=@Routes.DevCont asp-action=@Routes.deleteFirm asp-route-id=@item.Id><i class="fas fa-trash"></i> Remove</a>
+                                </li>
+                             
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+
+
+
+
+
+@section Scripts {
+    <script>
+        // Sayfa yüklendiğinde çalışacak JavaScript kodu
+        let datatable = $('.datatable');
+        function setLinks(element) {
+            element.forEach(e => {
+                var id = e.getAttribute('asp-route-id');
+                var cont = e.getAttribute('asp-controller');
+                var act = e.getAttribute('asp-action');
+                if (act == null || cont == null || id == null) return;
+                var url = '/' + cont + '/' + act + '/' + id;
+                console.log(url);
+                e.setAttribute("href", url);
+
+
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Tüm a ve button elementlerini seç
+            let linkList = document.querySelectorAll('a');
+            let buttonList = document.querySelectorAll('button');
+            setLinks(linkList);
+            setLinks(buttonList);
+        });
+    </script>
+}

@@ -1,0 +1,62 @@
+﻿<html lang="en">
+<!-- Mirrored from kanakku.dreamguystech.com/html/template/add-blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Oct 2023 14:15:20 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Kanakku - Bootstrap Admin HTML Template</title>
+
+    <link rel="shortcut icon" href="~/assets/img/favicon.png">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/summernote/summernote-lite.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/feather/feather.css">
+    <link href="~/assets/css/style.css" rel="stylesheet" />
+
+
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+
+    <div class="main-wrapper">
+
+        @await Html.PartialAsync("_header")
+        @await Html.PartialAsync("_sideBar")
+
+        <div class="page-wrapper" style="min-height: 800px;">
+            <div class="content container-fluid">
+                <div class="row">
+                    <div class=" col">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!--
+        <script src="~/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    -->
+
+    <script src="~/assets/js/feather.min.js"></script>
+    <script src="~/assets/js/jquery-ui.min.js"></script>
+    <script src="~/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="~/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/feather.min.js"></script>
+    <script src="~/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/assets/js/script.js"></script>
+    <script src="~/assets/plugins/select2/js/select2.min.js"></script>
+    <script src="~/assets/plugins/moment/moment.min.js"></script>
+    <script src="~/assets/plugins/summernote/summernote-lite.min.js"></script>
+
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body><!-- Mirrored from kanakku.dreamguystech.com/html/template/add-blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Oct 2023 14:15:21 GMT -->
+</html>

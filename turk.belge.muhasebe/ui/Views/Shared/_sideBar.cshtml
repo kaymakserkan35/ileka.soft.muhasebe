@@ -1,0 +1,55 @@
+﻿
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-logo">
+            <a href="index.html">
+                <img src="~/assets/img/logo.png" class="img-fluid logo" alt="">
+            </a>
+            <a href="index.html">
+                <img src="~/assets/img/logo-small.png" class="img-fluid logo-small" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: 740px;">
+        <div class="sidebar-inner slimscroll" style="overflow: hidden; width: 100%; height: 740px;">
+            <div id="sidebar-menu" class="sidebar-menu">
+
+                <ul>
+
+                    <li class="menu-title"><span>Developer Pages</span></li>
+                    <li class="text-center">
+                        <a asp-controller=@Routes.DevCont asp-action=@Routes.listUser>
+                            <i class="fa fa-link" aria-hidden="true"></i>  <span>
+                                list users
+                            </span>
+                        </a>
+
+                        <a asp-controller=@Routes.DevCont asp-action=@Routes.listFirm>
+                            <i class="fa fa-link" aria-hidden="true"></i>  <span>
+                                list firms
+                            </span>
+                        </a>
+
+                    </li>
+                </ul>
+                <hr class="iti__divider" />
+                <ul>
+                    <li class="menu-title"><span>Customers</span></li>
+                    <li class="active">
+                        <a asp-controller=@Routes.DevCont asp-action=@Routes.listContact><i class="fe fe-users"></i> <span>Customers</span></a>
+                    </li>
+                    <li>
+                        <a href="customer-details.html"><i class="fe fe-file"></i> <span>Customer Details</span></a>
+                    </li>
+                    <li>
+                        <a href="vendors.html"><i class="fe fe-user"></i> <span>Vendors</span></a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+        <div class="slimScrollBar" style="background: rgb(204, 204, 204); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 375.451px;"></div>
+        <div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+    </div>
+</div>

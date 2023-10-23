@@ -1,0 +1,48 @@
+﻿@using ui.Models.Routes;
+@model ICollection<DistrictModel>
+
+<script>
+    const modelData = @Html.Raw(Json.Serialize(Model)); // Model'i JSON formatına dönüştürün ve JavaScript değişkenine aktarın
+</script>
+
+
+@{
+    ViewData["Title"] = "Country List";
+}
+
+
+
+
+<a asp-controller=@Routes.DevCont asp-action=@Routes.addDistrict class="btn btn-dark d-block">   <i class="fa fa-plus-circle"></i> Add District</a>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>#</th>
+            <th>Name</th>
+            <th hidden>Country ID</th>
+            <th>Country Name</th>
+            <th hidden>City ID</th>
+            <th>City Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Id</td>
+                <td>@x.Name</td>
+                <td hidden>@x.CountryId</td>
+                <td>@x.CountryName</td>
+                <td hidden>@x.CityId</td>
+                <td>@x.CityName</td>
+                <td>
+                    <a asp-controller=@Routes.DevCont asp-action=@Routes.updateDistrict asp-route-id="@x.Id" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Update</a>
+                    <a asp-controller=@Routes.DevCont asp-action=@Routes.deleteDistrict asp-route-id="@x.Id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

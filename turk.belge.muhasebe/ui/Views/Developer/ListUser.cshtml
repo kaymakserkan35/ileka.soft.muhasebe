@@ -1,0 +1,146 @@
+﻿@using ui.Models.Routes;
+@model ICollection<UserListingModel>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Kullanıcıları listele";
+}
+
+
+<script>
+    const modelData = @Html.Raw(Json.Serialize(Model)); // Model'i JSON formatına dönüştürün ve JavaScript değişkenine aktarın
+</script>
+
+
+<a asp-controller=@Routes.DevCont asp-action=@Routes.addUser class="btn btn-dark d-block">     <i class="fa fa-plus-circle"></i> Add User</a>
+<!-- Tablo Görünümü -->
+
+
+<div class="table-responsive">
+    <table class="table table-rounded table-row-bordered border gy-7 gs-7" ">
+        <thead>
+            <tr class="fw-semibold fs-6 text-gray-800 border-bottom-2 border-gray-200">
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                @{
+                if (!Model.Any(x => x.EmailConfirmed == null))
+                {
+                    <th scope="col">EmailConfirmed</th>
+                }
+                }
+                @{
+                if (!Model.Any(x => x.PhoneNumberConfirmed == null))
+                {
+                    <th scope="col">PhoneNumberConfirmed</th>
+                }
+                }
+                <th scope="col">Firms</th>
+                @{
+                if (!Model.Any(x => x.Roles == null))
+                {
+
+                    <th scope="col">Roles</th>
+
+                }
+                }
+
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Name</td>
+                <td>@item.Surname</td>
+                <td>@item.PhoneNumber</td>
+                <td>@item.Email</td>
+
+                <td>@(item.EmailConfirmed ? "Evet" : "Hayır")</td>
+                <td>@(item.PhoneNumberConfirmed ? "Evet" : "Hayır")</td>
+
+                <td>
+                    <ul>
+                        @foreach (var x in item.Firms)
+                        {
+                        <li>
+                            <a asp-controller=@Routes.DevCont asp-action=@Routes.updateFirm  asp-route-id="@x.Id">@x.Name</a>
+                        </li>
+                        }
+                    </ul>
+                </td>
+
+
+                @if (item.Roles != null)
+                {
+                <td>
+                    <ul>
+                        @foreach (var x in item.Roles)
+                        {
+                        <li>@x</li>
+                        }
+                    </ul>
+                </td>
+                }
+                <td>
+
+                    <div class="dropdown dropdown-action">
+                        <a class="btn-action-icon" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                        <div class="dropdown-menu   customer-dropdown">
+                            <ul>
+                                <li class="dropdown-item"></li>
+                                <li class="dropdown-item"><a asp-controller=@Routes.DevCont asp-action=@Routes.deleteUser asp-route-id="@item.Id"><i class="fas fa-trash"></i> Sil</a></li>
+                                <li class="dropdown-item"><a asp-controller=@Routes.DevCont asp-action=@Routes.updateUser asp-route-id="@item.Id"><i class="fas fa-edit"></i> Güncelle</a></li>
+                                <li class="dropdown-item"><a href="#"><i class="fas fa-info-circle"></i> Detay</a></li>
+                                <!--    <li class="dropdown-item"><a href="#"><i class="fas fa-times"></i> İptal</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </td>
+
+
+
+
+            </tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>
+
+
+@section Scripts {
+        <script>
+            // Sayfa yüklendiğinde çalışacak JavaScript kodu
+            let datatable = $('.datatable');
+            function setLinks(element) {
+                element.forEach(e => {
+                    var id = e.getAttribute('asp-route-id');
+                    var cont = e.getAttribute('asp-controller');
+                    var act = e.getAttribute('asp-action');
+                    if (act == null || cont == null || id == null) return;
+                    var url = '/' + cont + '/' + act + '/' + id;
+                    console.log(url);
+                    e.setAttribute("href", url);
+
+
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // Tüm a ve button elementlerini seç
+                let linkList = document.querySelectorAll('a');
+                let buttonList = document.querySelectorAll('button');
+                setLinks(linkList);
+                setLinks(buttonList);
+            });
+        </script>
+}

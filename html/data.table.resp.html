@@ -1,0 +1,139 @@
+<html lang="en"><!-- Mirrored from kanakku.dreamguystech.com/html/template/add-blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Oct 2023 14:15:20 GMT --><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Kanakku - Bootstrap Admin HTML Template</title>
+    
+    <link rel="shortcut icon" href="./template/assets/img/favicon.png">
+    
+    <link rel="stylesheet" href="./template/assets/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="./template/assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./template/assets/plugins/fontawesome/css/all.min.css">
+    
+    <link rel="stylesheet" href="./template/assets/plugins/select2/css/select2.min.css">
+    
+    <link rel="stylesheet" href="./template/assets/plugins/summernote/summernote-lite.min.css">
+    
+    <link rel="stylesheet" href="./template/assets/plugins/feather/feather.css">
+    
+    <link rel="stylesheet" href="./template/assets/css/style.css">
+    </head>
+    <body>
+    
+        <div class="table-responsive">
+            <table class="datatable table table-stripped dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                <thead>
+                    <tr role="row">
+                        <th style="width: 260.219px;">Name</th>
+                        <th style="width: 422.141px;">Position</th>
+                        <th style="width: 199.016px;">Office</th>
+                        <th style="width: 103.375px;">Age</th>
+                        <th style="width: 183.781px;">Start date</th>
+                        <th style="width: 155.469px;">Salary</th>
+                        <th style="width: 155.469px;">#</th>
+                        <th style="width: 155.469px;">#</th>
+                    </tr>
+                </thead>
+                <tbody style="height: 500px; background-color: antiquewhite;">
+                    <tr role="row" class="odd">
+                        <td>
+                            <ul>
+                                <li>
+                                    <a asp-controller="controller" asp-action="action" asp-route-id="id">
+                                        Airi Satou
+                                    </a>
+                                </li>
+                            </ul>
+                           
+                            </td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>33</td>
+                        <td>2008/11/28</td>
+                        <td>$162,700</td>
+                        <td>
+                            <div class="dropdown dropdown-action">
+                            <a asp-controller="controller" asp-action="action" asp-route-id="id"  class="btn-action-icon" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                            <div class="dropdown-menu dropdown-menu-start customer-dropdown" >
+                            <ul>
+                           
+                            <li>
+                                <a asp-controller="controller" asp-action="action"  asp-route-id="id" class="dropdown-item" ><i class="fe fe-file-text me-2"></i>Convert to Sales Return</a>
+                            </li>
+                            <li>
+                                <a asp-controller="controller" asp-action="action" asp-route-id="id" class="dropdown-item" ><i class="fe fe-copy me-2"></i>Clone as Invoice</a>
+                            </li>
+                            </ul>
+                            </div>
+                            </div>
+                            </td>
+                            <td>
+                                <div class="dropdown dropdown-action ">
+                                <a asp-controller="controller" asp-action="action" asp-route-id="id"   data-bs-toggle="dropdown" aria-expanded="false">
+                                     Actions</a>
+                                <div class="dropdown-menu dropdown-menu-start customer-dropdown" >
+                                <ul>
+                               
+                                <li>
+                                    <a asp-controller="controller" asp-action="action"  asp-route-id="id" class="dropdown-item" ><i class="fe fe-file-text me-2"></i>Convert </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="controller" asp-action="action" asp-route-id="id" class="dropdown-item" ><i class="fe fe-copy me-2"></i>Clone </a>
+                                </li>
+                                </ul>
+                                </div>
+                                </div>
+                                </td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+        
+    
+    <script src="./template/assets/js/jquery-3.7.0.min.js"></script>
+    
+    <script src="./template/assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="./template/assets/js/feather.min.js"></script>
+    
+    <script src="./template/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    
+    <script src="./template/assets/plugins/select2/js/select2.min.js"></script>
+    
+    <script src="./template/assets/plugins/moment/moment.min.js"></script>
+    
+    <script src="./template/assets/plugins/summernote/summernote-lite.min.js"></script>
+    
+    <script src="./template/assets/js/script.js"></script>
+    
+    <script>
+        // Sayfa yüklendiğinde çalışacak JavaScript kodu
+        let datatable = $('.datatable');
+        console.log(datatable);
+        
+        function setLinks(element) {
+            element.forEach(e => {
+                var id = e.getAttribute('asp-route-id');
+                var cont = e.getAttribute('asp-controller');
+                var act = e.getAttribute('asp-action');
+                if (act == null || cont  == null || id == null)  return;
+                    var url = '/' + cont + '/' + act + '/' + id;
+                console.log(url);
+                e.setAttribute("href", url);
+                
+                
+            });
+        }
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            // Tüm a ve button elementlerini seç
+            let linkList = document.querySelectorAll('a');
+            let buttonList = document.querySelectorAll('button');
+            setLinks(linkList);
+            setLinks(buttonList);
+        });
+    </script>
+    
+  
+    </body><!-- Mirrored from kanakku.dreamguystech.com/html/template/add-blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Oct 2023 14:15:21 GMT --></html>

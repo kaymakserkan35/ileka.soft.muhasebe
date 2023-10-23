@@ -1,0 +1,70 @@
+﻿@model FirmAddingModel
+
+<form asp-controller=@Routes.DevCont asp-action=@Routes.addFirm method="post">
+
+    <div class="form-group">
+        <label for=@Model.Name>Firma Adı</label>
+        <input asp-for=@Model.Name class="form-control" />
+    </div>
+
+
+    <div class="form-group">
+        <label for=@Model.FirmEMail>Firma Email</label>
+        <input asp-for=@Model.FirmEMail class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for=@Model.PhoneNumber>Firma Phone</label>
+        <input asp-for=@Model.PhoneNumber class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="SoleTrader">Bireysel İşletme</label>
+        <input asp-for="SoleTrader" type="checkbox" />
+    </div>
+
+    <hr />
+
+    <div class="form-group">
+        <label for=@Model.UserName> Ad</label>
+        <input asp-for=@Model.UserName class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for=@Model.UserSurName>Soyad</label>
+        <input asp-for=@Model.UserSurName class="form-control" />
+    </div>
+    <div class="form-group">
+        <label @Model.UserEmail>UserEmail</label>
+        <input asp-for=@Model.UserEmail class="form-control" />
+    </div>
+    <div class="form-group">
+        <label @Model.UserEmailOptional>UserEmailOptional</label>
+        <input asp-for=@Model.UserEmailOptional class="form-control" />
+    </div>
+    <div class="form-group">
+        <label @Model.UserPhone>UserPhone</label>
+        <input asp-for=@Model.UserPhone class="form-control" />
+    </div>
+    <div class="form-group">
+        <label @Model.UserEmailOptional>UserEmailOptional</label>
+        <input asp-for=@Model.UserEmailOptional class="form-control" />
+    </div>
+
+
+
+
+    <div class="form-group">
+        <label>Modüller:</label>
+
+        <select multiple class="form-select  bg-transparent" asp-for="@Model.SelectedModules">
+            @foreach (var item in Model.Modulles)
+            {
+                <option type="checkbox" checked="checked" id="@item.Id" value="@item.Id" name=@item.Id />
+                @item.Name
+            }
+        </select>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Firmayı Kaydet</button>
+</form>

@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="data.access.abstraction.repo.IRepoCity">
+    <Position X="6" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoUser">
+    <Position X="24.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAEAAEAABAAgAQAEAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoRole">
+    <Position X="27.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAAAAAQAEAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoDistrict">
+    <Position X="4" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoFirmHasModule">
+    <Position X="10.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoCountry">
+    <Position X="7.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoCari">
+    <Position X="18.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoCariGroup">
+    <Position X="6.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoFirm">
+    <Position X="10.75" Y="9.75" Width="1.5" />
+    <InheritanceLine Type="data.access.abstraction.repo.IRepository" FixedFromPoint="true">
+      <Path>
+        <Point X="6.75" Y="2.25" />
+        <Point X="6.75" Y="1.875" />
+        <Point X="11.5" Y="1.875" />
+        <Point X="11.5" Y="9.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoBank">
+    <Position X="0.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoBankAccount">
+    <Position X="2.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoBankBranch">
+    <Position X="17.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoCurrency">
+    <Position X="21" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoFirmUsers">
+    <Position X="13.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoModule">
+    <Position X="1.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoInvoice">
+    <Position X="15.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoInvoiceHasStock">
+    <Position X="22.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoStock">
+    <Position X="5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoTaxOffice">
+    <Position X="16.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoUnitsOfMeasurement">
+    <Position X="9" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoVault">
+    <Position X="20.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoPaymentMethod">
+    <Position X="14.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepoBankAccountType">
+    <Position X="13.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepoFolder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepositoryGeneric&lt;TEntity&gt;" Collapsed="true">
+    <Position X="4.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAAAAAQAEAAA=</HashCode>
+      <FileName>abstraction\repo\IRepositoryGeneric.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="data.access.abstraction.repo.IRepository" Collapsed="true">
+    <Position X="6.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>abstraction\repo\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

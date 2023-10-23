@@ -1,0 +1,93 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ui
+build_property.RootNamespace = ui
+build_property.ProjectDir = C:\Users\Asus\Desktop\turk.belge\turk.belge.3\turk.belge.muhasebe.42\turk.belge.muhasebe\ui\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Asus\Desktop\turk.belge\turk.belge.3\turk.belge.muhasebe.42\turk.belge.muhasebe\ui
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Authorizetion/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yaXpldGlvblxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Developer/AddFirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2ZWxvcGVyXEFkZEZpcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Developer/AddUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2ZWxvcGVyXEFkZFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Developer/DetailFirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2ZWxvcGVyXERldGFpbEZpcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Developer/ListFirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2ZWxvcGVyXExpc3RGaXJtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Developer/ListUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2ZWxvcGVyXExpc3RVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Developer/UpdateFirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2ZWxvcGVyXFVwZGF0ZUZpcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Developer/UpdateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2ZWxvcGVyXFVwZGF0ZVVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Shared/AddContact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkZENvbnRhY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Shared/DetailContact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERldGFpbENvbnRhY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Shared/DetailFirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERldGFpbEZpcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Shared/ListContact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExpc3RDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Shared/ListDistrict.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExpc3REaXN0cmljdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Shared/_header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9oZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/Shared/_sideBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9zaWRlQmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Desktop/turk.belge/turk.belge.3/turk.belge.muhasebe.42/turk.belge.muhasebe/ui/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

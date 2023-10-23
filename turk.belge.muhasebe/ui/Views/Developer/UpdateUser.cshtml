@@ -1,0 +1,78 @@
+﻿@model UserEditingModel
+@{
+    ViewData["Title"] = "Kullanıcı Güncelle";
+}
+
+
+<h2>Kullanıcı Güncelle</h2>
+
+<form asp-controller=@Routes.DevCont asp-action=@Routes.updateUser>
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Name">Adı:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SurName">Soyadı:</label>
+        <input asp-for="SurName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email">E-posta:</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="form-check">
+        <label class="form-check-label" for=@Model.EmailConfirmed>Is Email Confirmed</label>
+        <input class="form-check-input" type="checkbox" asp-for="@Model.EmailConfirmed">
+    </div>
+    <div class="form-group">
+        <label asp-for="PhoneNumber">Telefon Numarası:</label>
+        <input asp-for="PhoneNumber" class="form-control" />
+    </div>
+    <div class="form-check">
+        <label class="form-check-label" for=@Model.PhoneNumberConfirmed>Is Phone Confirmed</label>
+        <input class="form-check-input" type="checkbox" asp-for="@Model.PhoneNumberConfirmed">
+    </div>
+
+    <div class="form-group">
+        <label asp-for=@Model.EmailOptional>EmailOptional:</label>
+        <input asp-for="EmailOptional" class="form-control" />
+    </div>
+
+
+    <div class="form-group">
+        <label asp-for=@Model.PhoneNumberOptional>PhoneNumberOptional:</label>
+        <input asp-for="PhoneNumberOptional" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Firmalar:</label>
+
+        <select multiple class="form-select  bg-transparent" id=@Model.SelectedFirms asp-for=@Model.SelectedFirms>
+
+            @foreach (var firm in Model.Firms)
+            {
+                <option type="checkbox" selected="@((firm.IsSelected ? "selected" : null))" name="@firm.Id" id="@firm.Id" value="@firm.Id" />
+
+                @firm.Name
+            }
+        </select>
+
+        @if (Model.Roles != null)
+        {
+            <select multiple class="form-select  bg-transparent" id=@Model.SelectedRoles asp-for=@Model.SelectedRoles>
+                @foreach (var item in Model.Roles)
+                {
+                    <option type="checkbox" selected="@((item.IsSelected ? "selected" : null))" name="@item.Id" id="@item.Id" value="@item.Id" />
+                    @item.Name
+                }
+            </select>
+        }
+
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
